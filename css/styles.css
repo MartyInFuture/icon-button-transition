@@ -1,0 +1,145 @@
+/* main styles */
+
+.container {
+  display: flex;
+}
+
+.container button:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* Inline svg */
+.button {
+  position: relative;
+  padding: 8px 12px 8px 48px;
+  border-radius: 4px;
+
+  font-size: 24px;
+  color: black;
+
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  background-color: green;
+
+  transition: background-color 250ms ease-in;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  transition: 250ms ease-in;
+}
+
+.icon-normal {
+  left: 12px;
+}
+
+.twitter {
+  top: 60px;
+}
+
+.button:hover .twitter {
+  top: 50%;
+}
+
+.button:hover .instagram {
+  top: -16px;
+}
+
+.button:hover {
+  background-color: yellow;
+}
+
+/* Background svg */
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  padding: 8px 12px;
+  border-radius: 4px;
+
+  font-size: 24px;
+  color: black;
+
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+
+  background-color: green;
+
+  transition: background-color 250ms ease-out;
+}
+
+.btn::before,
+.btn::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+
+  margin-right: 4px;
+
+  transition: transform 250ms ease-out;
+}
+
+.btn::before {
+  background-image: url('../images/instagram.svg');
+}
+
+.btn:hover::before {
+  transform: translateY(-40px);
+}
+
+.btn::after {
+  position: absolute;
+
+  background-image: url('../images/twitter.svg');
+
+  transform: translateY(40px);
+}
+
+.btn:hover::after {
+  transform: translateY(0px);
+}
+
+.btn:hover {
+  background-color: yellow;
+}
+
+/* Reverse inline svg */
+
+.button-reverse {
+  padding: 8px 48px 8px 12px;
+}
+
+.icon-reverse {
+  right: 12px;
+}
+
+/* Reverse background svg */
+
+.btn-reverse::before,
+.btn-reverse::after {
+  margin-left: 4px;
+  margin-right: 0px;
+}
+
+.btn-reverse::before {
+  position: absolute;
+  right: 12px;
+}
+
+.btn:hover::before {
+  transform: translateY(-40px);
+}
+
+.btn-reverse::after {
+  position: static;
+}
